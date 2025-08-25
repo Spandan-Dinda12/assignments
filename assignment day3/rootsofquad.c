@@ -2,37 +2,18 @@
 #include <math.h>
 
 int main() {
-    float a, b, c, discriminant, realPart, imaginaryPart, root1, root2;
+    float a, b, c;
 
     // Input coefficients
     printf("Enter coefficients a, b and c: ");
-    scanf("%f %f %f", &a, &b, &c);
+    scanf("%d %d %d", &a, &b, &c);
+    float root1 , root2;
 
-    // Calculate discriminant
-    discriminant = b * b - 4 * a * c;
+    root1 = (-b + sqrt((pow(b,2) - 4*a*c)))/2*a;
+    root2 = (-b - sqrt((pow(b,2) - 4*a*c)))/2*a;
 
-    if (discriminant > 0) {
-        // Two distinct real roots
-        root1 = (-b + sqrt(discriminant)) / (2 * a);
-        root2 = (-b - sqrt(discriminant)) / (2 * a);
-        printf("Roots are real and different:\n");
-        printf("Root 1 = %.2f\n", root1);
-        printf("Root 2 = %.2f\n", root2);
-    }
-    else if (discriminant == 0) {
-        // Two equal real roots
-        root1 = root2 = -b / (2 * a);
-        printf("Roots are real and equal:\n");
-        printf("Root 1 = Root 2 = %.2f\n", root1);
-    }
-    else {
-        // Complex roots
-        realPart = -b / (2 * a);
-        imaginaryPart = sqrt(-discriminant) / (2 * a);
-        printf("Roots are complex and imaginary:\n");
-        printf("Root 1 = %.2f + %.2fi\n", realPart, imaginaryPart);
-        printf("Root 2 = %.2f - %.2fi\n", realPart, imaginaryPart);
-    }
+    printf("The roots: %f and %f" , root1 , root2);
 
     return 0;
+
 }
