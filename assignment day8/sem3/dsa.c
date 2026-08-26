@@ -120,9 +120,9 @@ void display()
     return;
 
     printf("\n Enter Data:");
-    scanf("%d" ,&nw->data);
-    nw->next=head;
-    head=nw;
+    scanf("%d" ,&temp->data);
+    temp->next=head;
+    head=temp;
     printf("\nNode added successfully.");
 }
 
