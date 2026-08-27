@@ -33,4 +33,33 @@ int main()
     e1.display();
 
     return 0;
-}
+} 
+
+#include <iostream>
+using namespace std;
+   
+    class Car
+    {
+        public:
+        string brand;
+        int price;
+
+        void input()
+        {
+            cout<<'Name of brand';
+            cin>>brand;
+            cout<<'Price';
+            cin>>price;
+        }
+        void display()
+        {
+            cout<<'Name of brand: '<< brand << '\n'
+                <<'Price: '<< price << '\n';
+        }
+    };  
+        int main(){
+            Car c1;
+            c1.input();
+            c1.display();
+            return 0;
+        }
